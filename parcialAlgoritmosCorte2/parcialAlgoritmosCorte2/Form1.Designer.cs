@@ -40,7 +40,7 @@
             this.txtGrado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label003 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,7 +49,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -58,6 +57,8 @@
             this.docSel = new System.Windows.Forms.TextBox();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +103,7 @@
             // txtMadre
             // 
             this.txtMadre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMadre.Location = new System.Drawing.Point(223, 210);
+            this.txtMadre.Location = new System.Drawing.Point(223, 202);
             this.txtMadre.Name = "txtMadre";
             this.txtMadre.Size = new System.Drawing.Size(115, 25);
             this.txtMadre.TabIndex = 8;
@@ -118,7 +119,7 @@
             // txtPadre
             // 
             this.txtPadre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPadre.Location = new System.Drawing.Point(527, 210);
+            this.txtPadre.Location = new System.Drawing.Point(530, 197);
             this.txtPadre.Name = "txtPadre";
             this.txtPadre.Size = new System.Drawing.Size(112, 25);
             this.txtPadre.TabIndex = 10;
@@ -189,17 +190,17 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Ingrese su tipo de documento";
             // 
-            // label3
+            // label003
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(352, 210);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 17);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Ingrese el nombre del padre";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label003.AutoSize = true;
+            this.label003.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label003.ForeColor = System.Drawing.Color.White;
+            this.label003.Location = new System.Drawing.Point(352, 205);
+            this.label003.Name = "label003";
+            this.label003.Size = new System.Drawing.Size(172, 17);
+            this.label003.TabIndex = 17;
+            this.label003.Text = "Ingrese el nombre del padre";
+            this.label003.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -272,7 +273,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(30, 213);
+            this.label10.Location = new System.Drawing.Point(30, 210);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(187, 17);
             this.label10.TabIndex = 24;
@@ -289,24 +290,11 @@
             this.label11.TabIndex = 25;
             this.label11.Text = "Por favor ingrese los siguientes datos del estudiante";
             // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(57)))), ((int)(((byte)(221)))));
-            this.btnLimpiar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLimpiar.Location = new System.Drawing.Point(213, 271);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(101, 36);
-            this.btnLimpiar.TabIndex = 26;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(124)))), ((int)(((byte)(168)))));
             this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(33, 60);
+            this.btnModificar.Location = new System.Drawing.Point(363, 31);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(94, 44);
             this.btnModificar.TabIndex = 27;
@@ -322,12 +310,13 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(944, 220);
             this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(10)))), ((int)(((byte)(21)))));
             this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(153, 60);
+            this.btnEliminar.Location = new System.Drawing.Point(463, 30);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(110, 44);
             this.btnEliminar.TabIndex = 29;
@@ -354,16 +343,16 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(11, 19);
+            this.label12.Location = new System.Drawing.Point(17, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(138, 17);
+            this.label12.Size = new System.Drawing.Size(204, 17);
             this.label12.TabIndex = 31;
-            this.label12.Text = "Ingrese el documento ";
+            this.label12.Text = "Ingrese el numero de documento ";
             // 
             // docSel
             // 
             this.docSel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.docSel.Location = new System.Drawing.Point(155, 19);
+            this.docSel.Location = new System.Drawing.Point(20, 37);
             this.docSel.Name = "docSel";
             this.docSel.Size = new System.Drawing.Size(121, 25);
             this.docSel.TabIndex = 32;
@@ -375,15 +364,40 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(120)))));
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.docSel);
             this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Location = new System.Drawing.Point(656, 194);
+            this.panel1.Location = new System.Drawing.Point(368, 241);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 125);
+            this.panel1.Size = new System.Drawing.Size(585, 78);
             this.panel1.TabIndex = 33;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(396, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 17);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Que opcion desaea realizar";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(72)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(158, 30);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(97, 36);
+            this.btnBuscar.TabIndex = 35;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Form1
             // 
@@ -395,7 +409,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtTipoDoc);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -404,7 +417,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label003);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtGrado);
@@ -442,7 +455,7 @@
         private System.Windows.Forms.ComboBox txtGrado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label003;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -451,7 +464,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnEliminar;
@@ -460,6 +472,8 @@
         private System.Windows.Forms.TextBox docSel;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 
